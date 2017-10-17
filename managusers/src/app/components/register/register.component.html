@@ -1,0 +1,49 @@
+<section>
+    <div class="container">
+        <div class="register">
+            <div class="register-title">
+                <h1>立即注册</h1>
+            </div>
+
+            <form [formGroup]="oForm" (ngSubmit)="postDate()">
+                <table class="table noBoder">
+                    <tr class="form-group">
+                        <td class="text-right"> <i class="red">* </i> 用户名:</td>
+                        <td>
+                            <input type="text" formControlName="username" class="form-control" placeholder="用户名">
+                        </td>
+                        <td>
+                            <!-- <span ng-if="true" ng-class="{'red': true}">用户名不得小于 3 个字符</span> -->
+                            <span></span>
+                        </td>
+                    </tr>
+                    <tr class="form-group">
+                        <td class="text-right"><i class="red">* </i> 密码:</td>
+                        <td><input type="password" class="form-control" formControlName="password" placeholder="密码啊"></td>
+                        <td>请填写密码, 最小长度为 6 个字符</td>
+                    </tr>
+                    <tr class="form-group">
+                        <td class="text-right"><i class="red">* </i> 确认密码:</td>
+                        <td><input type="password" class="form-control" formControlName="rePassword" id="" placeholder="密码啊"></td>
+                        <td>请再次输入密码</td>
+                    </tr>
+                    <tr class="form-group">
+                        <td class="text-right"><i class="red">* </i> Email:</td>
+                        <td><input type="email" class="form-control" formControlName="email" placeholder="邮箱"></td>
+                        <td>请输入邮箱地址</td>
+                    </tr>
+                    <tr class="form-group">
+                        <td></td>
+                        <td><button type="button" class="btn btn-success btn-block">注册</button></td>
+                        <td>
+                            <label for="clause">
+                            <input type="checkbox"  id="clause">同意网站服务条款
+                        </label>
+                        </td>
+                    </tr>
+                </table>
+
+            </form>
+        </div>
+    </div>
+</section>
